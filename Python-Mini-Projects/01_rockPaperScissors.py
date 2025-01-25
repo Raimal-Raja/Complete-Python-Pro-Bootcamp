@@ -1,4 +1,5 @@
 import random
+print("Welcome to Rock, Paper, Sciessors game! Cipher")
 rock = '''
     _______
 ---'   ____)
