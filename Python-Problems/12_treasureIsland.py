@@ -1,0 +1,20 @@
+print('Welcome to Treasure Island. Your mission is to find the treasure.')
+direction = input("You're at a road. Where do you want to go? Type 'Left' or 'Right' ")
+direction.lower()
+if direction == "left":
+    patience = input("you have come to a lake, there is island in the middle of lake. Type 'wait' to wait for boat. Type 'swim to swim across.")
+    patience.lower()
+    if patience == "wait":
+        door = input("You have arrive at the island unharmed. There is a house with 3 doors. Red, Yellow, Blue. Which color do you chose? ").lower()
+        if door == "yellow":
+            print("You have found the treasure. You Win!")
+        elif door == "blue":
+            print("You have enterd a room of beast. Game over")
+        else:
+            print("You have chosed a door that doesn't exist. Game over!")
+    else:
+        print('You got attacked by an angry tout. Game over!')
+        
+else:
+    print('You fell into a hole. Game over!')
+    
