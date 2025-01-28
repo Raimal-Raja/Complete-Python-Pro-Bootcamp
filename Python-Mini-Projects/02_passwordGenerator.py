@@ -12,9 +12,9 @@ numbers = [
 
 welcomeMessage = input('Welcome to password generator 😊\nPlease hit enter and provide some details below!')
 
-inputLetter = int(input("Enter number of letters"))
-inputSymbol = int(input("Enter numbber of Symbol"))
-inputNumber = int(input("Enter number of numbers"))
+inputLetter = int(input("Enter number of letters you want in password: "))
+inputSymbol = int(input("Enter numbber of Symbols you want in password: "))
+inputNumber = int(input("Enter number of numbers you want in password: "))
 indexOfLetters =[]
 for i in range (0, inputLetter):
     index = random.randint(i,len(symbols))
