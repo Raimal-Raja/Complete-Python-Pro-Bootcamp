@@ -8,8 +8,10 @@
 
 
 # same thing using functions
+import math
 def paint_calc(height, width, cover):
-    numberOfcan = height * width / cover
+    area = height * width
+    numberOfcan = math.ceil(area/cover)
     round(numberOfcan, 2)
     print(f'You will need to buy {numberOfcan} cans of paint.')
 
