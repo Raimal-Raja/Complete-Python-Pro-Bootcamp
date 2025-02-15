@@ -37,3 +37,4 @@ while not bidding_finished:
         bidding_finished = True
     elif should_continue == 'yes':
         os.system('cls')
+find_highest_bidder(bids)
