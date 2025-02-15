@@ -10,4 +10,4 @@ while True:
         else:
             print("It is a leap year!")
     else:
-        print("It is not a leap year! ")
+        print("It is not a leap year!") 
