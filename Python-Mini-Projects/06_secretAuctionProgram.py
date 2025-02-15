@@ -31,4 +31,4 @@ for bidder in auction:
     if auction[bidder] > highest_bid:
         highest_bid = auction[bidder]
         winner = bidder
-print(f"the winner is {bidder} with highest bid {highest_bid}")
+print(f"The winner is {bidder} with highest bid ${highest_bid}")
