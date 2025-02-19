@@ -23,19 +23,14 @@ n2 = int(input('Enter number2: '))
 print('+ = for addition\n- = for substraction\n/ = for division\n* = for multiplication ')
 operation = input('which operation have to perform?')
 
-dict = {
-    '+': ['result',add(n1,n2)],
+operations = {
+    '+': ['result',add(n1,n2)].remove(","),
     '-': ['result',sub(n1,n2)],
     '*': ['result',multi(n1,n2)],
     '/':['result',div(n1,n2)]
 }
-if operation =='+':
-    print(dict['+'])
-elif operation == '-':
-    print(dict['-'])
-elif operation =='*':
-    print(dict['*'])
-elif operation =='/':
-    print(dict['/'])
+
+if operation in operations:
+    print("Result:", operations[operation])
 else:
     print('Invalid input!')
