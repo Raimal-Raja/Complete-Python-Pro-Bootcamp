@@ -24,12 +24,12 @@ print('+ = for addition\n- = for substraction\n/ = for division\n* = for multipl
 operation = input('which operation have to perform?')
 
 if operation == "+":
-    add(n1=n1, n2=n2)
+    print("result", add(n1=n1, n2=n2))
 elif operation == "-":
-    sub(n1=n1,n2=n2)
+    print("result",sub(n1=n1,n2=n2))
 elif operation == "*":
-    multi(n1,n2)
+    print("result",multi(n1,n2))
 elif operation =="/":
-    multi(n1, n2)
+    print("result",multi(n1, n2))
 else:
     print('Invalid operation!')
