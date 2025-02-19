@@ -14,8 +14,8 @@ def multi(n1, n2):
 
 # division
 def div(n1, n2):
-    # if n2 == 0:
-    #     return "Error! Division by zero."  # Handle division by zero
+    if n2 == 0:
+        return "Error! Division by zero."
     return n1 / n2
 
 n1 = int(input('Enter number1: '))
