@@ -30,8 +30,6 @@ operations = {
     '/':div
 }
 
-
-
 for operator in operations:
     print(operator)
 operator = input('which operation have to perform?')
