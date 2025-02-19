@@ -32,10 +32,10 @@ operations = {
 
 for operator in operations:
     print(operator)
-operator = input('which operation have to perform?')
+operand = input('which operation have to perform?')
 
 if operator in operations:
     result = operations[operator](n1, n2)  # Call the function with n1, n2
-    print("Result:", result)
+    print(f"{n1} {operand} {n2} = {result}")
 else:
     print('Invalid input!')
