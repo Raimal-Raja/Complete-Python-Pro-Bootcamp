@@ -12,3 +12,8 @@ computer_card = []
 for _ in range(2):
     user_card.append(deal_card())
     computer_card.append(deal_card())
+    
+def calculate_score(cards):
+    if sum(cards) ==21 and len(cards) == 2:
+        return 0
+    return sum(cards)
