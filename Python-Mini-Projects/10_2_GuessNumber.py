@@ -10,7 +10,6 @@ logo = '''
   \_____|\__,_|\___||___/___/  \__|_| |_|\___| |_| \_|\__,_|_| |_| |_|_.__/ \___|_|   
 '''
 
-
 def play_game():
     print(logo)
     print("Welcome to the number guessing game!")
