@@ -11,6 +11,7 @@ logo = '''
 '''
 
 print(logo)
+
 attempts = 0
 counter = 0
 level = int(input("Welcome to number guess game.\nType '1' for easy: \nType '2' for hard: "))
