@@ -1,5 +1,4 @@
 enemies = 1
-
 def increase_enemies():
     # global enemies # modify global score
     # enemies +=1
