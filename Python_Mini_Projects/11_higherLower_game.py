@@ -36,4 +36,6 @@ account_b = random.choice(data)
 if account_a == account_b:
     account_a = random.choice(data)
     
-# Format the account data into printable format.
+print(f'Compare A: {format_data(account_a)}')
+print(vs)
+print(f'Compare B: {format_data(account_b)}')
