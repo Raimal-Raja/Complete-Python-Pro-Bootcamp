@@ -19,9 +19,21 @@ vs = """
 | |/ (__  ) 
 |___/____(_)
 """
+
+
+def format_data(account):
+    '''Format the account data into printable format'''
+    accountName = account['name']
+    accountDesc = account['description']
+    accountCountry = account['country']
+    return f'{accountName}, a {accountDesc}, from {accountCountry}'
+
+# Display logo
+print(logo)
 # Generate  a random account from the game data.
 account_a = random.choice(data)
 account_b = random.choice(data)
 if account_a == account_b:
     account_a = random.choice(data)
     
+# Format the account data into printable format.
