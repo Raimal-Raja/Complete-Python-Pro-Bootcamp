@@ -1,3 +1,5 @@
+from gameData import data
+import random
 logo = """
     __  ___       __             
    / / / (_)___ _/ /_  ___  _____
@@ -17,5 +19,9 @@ vs = """
 | |/ (__  ) 
 |___/____(_)
 """
-
-from gameData import data
+# Generate  a random account from the game data.
+account_a = random.choice(data)
+account_b = random.choice(data)
+if account_a == account_b:
+    account_a = random.choice(data)
+    
