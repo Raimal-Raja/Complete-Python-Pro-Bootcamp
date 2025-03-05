@@ -1,4 +1,10 @@
-from turtle import  turtles, Screen
+from turtle import Turtle, Screen
+
+timmy = Turtle()
+timmy.shape("turtle")
+timmy.color('pink')
+print(timmy)
+
 
 my_screen = Screen()
 print(my_screen.canvheight)
