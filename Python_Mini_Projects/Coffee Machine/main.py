@@ -20,4 +20,4 @@ while isOn:
         moneyMachine.report()
     else:
         drink = menu.find_drink(choice)
-        print(drink)
+        coffeeMaker.is_resource_sufficient(drink)
