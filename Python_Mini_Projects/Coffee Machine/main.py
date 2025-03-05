@@ -12,11 +12,12 @@ moneyMachine.report()
 
 while isOn:
     options = menu.get_items()
-    choice = input(f"What would you like? {{options}}:")
-    if choice == "offer":
+    choice = input(f"What would you like? ({options}):")
+    if choice == "off":
         isOn = False
     elif choice == "report":
         coffeeMaker.report()
         moneyMachine.report()
     else:
-        drink = menu.find_drink()
+        drink = menu.find_drink(choice)
+        print(drink)
