@@ -2,8 +2,9 @@ from turtle import Turtle, Screen
 
 timmy = Turtle()
 timmy.shape("turtle")
-timmy.color('pink')
 print(timmy)
+timmy.color('pink')
+timmy.forward(100)
 
 
 my_screen = Screen()
