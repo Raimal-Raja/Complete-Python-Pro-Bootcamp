@@ -7,14 +7,5 @@ timmyTheTurtle.forward(100)
 timmyTheTurtle.right(90)
 timmyTheTurtle.forward(100)
 
-
-
-
-
-
-
-
-
-
 screen = Screen()
 screen.exitonclick()
