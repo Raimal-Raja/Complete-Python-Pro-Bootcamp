@@ -3,6 +3,7 @@ import random
 
 t.colormode(255)
 tim = t.Turtle()
+tim.hideturtle()
 tim.speed('fast')
 tim.penup()
 color_list = [
@@ -15,9 +16,8 @@ color_list = [
     (10, 30, 15), (15, 40, 20), (18, 50, 25), (20, 60, 30),  # Dark teals
     (12, 24, 30), (24, 36, 40), (36, 48, 50), (48, 60, 60),  # Dark cyan shades
     (30, 20, 10), (40, 30, 15), (50, 40, 20), (60, 50, 25),  # Dark oranges
-    (20, 10, 30), (30, 15, 40), (40, 18, 50), (50, 20, 60)   # Dark violets
+    (20, 10, 30), (30, 15, 40), (40, 18, 50), (50, 20, 60)  # Dark violets
 ]
-
 
 tim.setheading(225)
 tim.forward(200)
@@ -27,14 +27,12 @@ for dot_count in range(1, number_of_dots + 1):
     tim.dot(20, random.choice(color_list))
     tim.forward(30)
 
-    if dot_count%10 ==0:
+    if dot_count % 10 == 0:
         tim.setheading(90)
         tim.forward(50)
         tim.setheading(180)
         tim.forward(300)
         tim.setheading(0)
-
-
 
 screen = t.Screen()
 screen.exitonclick()
