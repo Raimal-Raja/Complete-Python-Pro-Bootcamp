@@ -18,7 +18,9 @@ def turn_right():
 
 def clear():
     tim.clear()
+    tim.penup()
     tim.home()
+    tim.pendown()
 
 screen.listen()
 screen.onkey(move_forwards, "w")
