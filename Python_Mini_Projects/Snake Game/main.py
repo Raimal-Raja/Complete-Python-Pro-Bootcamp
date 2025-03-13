@@ -6,7 +6,7 @@ screen.setup(width=600, height=600)
 screen.bgcolor('black')
 screen.title("My Snake Game")
 
-
+starting_position = [(0, 0), (-20, 8)]
 segment_1 = Turtle('square')
 segment_1.color('white')
 
