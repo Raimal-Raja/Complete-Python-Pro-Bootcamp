@@ -7,8 +7,10 @@ screen.bgcolor('black')
 screen.title("My Snake Game")
 
 starting_position = [(0, 0), (-20, 8)]
-segment_1 = Turtle('square')
-segment_1.color('white')
+
+for position in starting_position:
+    segment_1 = Turtle('square')
+    segment_1.color('white')
 
 segment_2 = Turtle("square")
 segment_2.color("white")
