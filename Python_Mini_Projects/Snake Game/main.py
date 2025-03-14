@@ -1,5 +1,7 @@
 from turtle import Turtle, Screen
 from snake import Snake
+from food import Food
+from scoreboard import Scoreboard
 import time
 
 screen = Screen()
@@ -9,6 +11,8 @@ screen.title("My Ex-Female Friend (Snake-Game)")
 screen.tracer(0)
 
 snake: Snake = Snake()
+food: Food = Food()
+scoreboard: Scoreboard = Scoreboard()
 
 game_is_on = True
 while game_is_on:
@@ -17,5 +21,10 @@ while game_is_on:
     snake.move()
     if snake.head.distance(food) < 15:
         food.refesh()
+        scoreboard.increase_score()
+    if snake.head.xcor() >280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.xcor() < -280:
+        game_is_on = False
+        scoreboard.game_over()
+
 
 screen.exitonclick()
