@@ -34,3 +34,19 @@ class Snake:
             self.segments[seg_num].goto(new_x, new_y)
         # segments[0].left(20)
         self.segments[0].forward(MOVE_DISTANCE)
+
+    def up(self):
+        if self.head.heading() != 270:  # Prevent moving directly opposite
+            self.head.setheading(90)
+
+    def down(self):
+        if self.head.heading() != 90:  # Prevent moving directly opposite
+            self.head.setheading(270)
+
+    def left(self):
+        if self.head.heading() != 0:  # Prevent moving directly opposite
+            self.head.setheading(180)
+
+    def right(self):
+        if self.head.heading() != 180:  # Prevent moving directly opposite
+            self.head.setheading(0)
