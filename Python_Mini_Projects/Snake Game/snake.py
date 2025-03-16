@@ -11,11 +11,7 @@ class Snake:
     def create_snake(self):
         for position in STARTING_POSITIONS:
             self.add_segment(position)
-            # new_segment = Turtle('square')
-            # new_segment.color('white')
-            # new_segment.penup()
-            # new_segment.goto(position)
-            # self.segments.a ppend(new_segment)
+
     # @property
     def head(self):
         return self.segments[0]
