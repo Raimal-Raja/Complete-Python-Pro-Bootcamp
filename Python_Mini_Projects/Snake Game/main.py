@@ -10,9 +10,9 @@ screen.bgcolor('black')
 screen.title("My Ex-Female Friend (Snake-Game)")
 screen.tracer(0)
 
-snake: Snake = Snake()
-food: Food = Food()
-scoreboard: Scoreboard = Scoreboard()
+snake = Snake()
+food = Food()
+scoreboard = Scoreboard()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -29,13 +29,18 @@ while game_is_on:
         snake.extend()
         scoreboard.increase_score()
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-        game_is_on = False
-        scoreboard.game_over()
+        # game_is_on = False
+        # scoreboard.game_over()
+        scoreboard.reset()
+        snake.reset()
 
     for segment in snake.segments[1:]:
-        if snake.head.distance(segment) < 10:
-            game_is_on = False
-            scoreboard.game_over()
-
+        if segment == snake.head:
+            pass
+        elif snake.head.distance(segment) < 10:
+            # game_is_on = False
+            # scoreboard.game_over()
+            scoreboard.reset()
+            snake.reset()
 
 screen.exitonclick()
