@@ -26,5 +26,16 @@ data = pd.read_csv('weather_data.csv')
 # print(data_condition)
 
 # get data columns directly
-col = data.condition
-print(col)
+# col = data.condition
+# print(col)
+
+
+# Get data in row
+# row = data[data.day =="Monday"]
+# print(row)
+
+# Get data of row having highest value
+# high_value_row = data[data['temp'] == data['temp'].max()]
+# print(high_value_row)
+high_value_row = data[data.temp == data.temp.max()]
+print(high_value_row)
