@@ -34,8 +34,14 @@ data = pd.read_csv('weather_data.csv')
 # row = data[data.day =="Monday"]
 # print(row)
 
-# Get data of row having highest value
+# Get data of row having the highest value
 # high_value_row = data[data['temp'] == data['temp'].max()]
 # print(high_value_row)
-high_value_row = data[data.temp == data.temp.max()]
-print(high_value_row)
+# high_value_row = data[data.temp == data.temp.max()]
+# print(high_value_row)
+
+# # celcius to fernhight
+# monday = data[data.day == "Monday"]
+# monday_temp = int(monday.temp)
+# monday_temp_f = monday_temp * 9 / 5 + 32
+# print(monday_temp_f)
