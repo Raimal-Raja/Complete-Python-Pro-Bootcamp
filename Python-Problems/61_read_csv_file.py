@@ -16,4 +16,7 @@ import pandas
 import pandas as pd
 
 data = pandas.read_csv("weather_data.csv")
-print(data['temp'])
+# print(data['temp'])
+data_dict = data.to_dict()
+print(data_dict)
+
