@@ -7,3 +7,10 @@ count_red = len(data[data['Primary Fur Color'] == 'Cinnamon'])
 print(count_red)
 count_black = len(data[data['Primary Fur Color'] == 'Black'])
 print(count_black)
+
+data_dict = {
+    "Fur Color":['Gray', 'Cinnamon','Black'],
+    "Count":[count_gray,count_red,count_black]
+}
+df = pd.DataFrame(data_dict)
+df.to_csv('colorCountFromDataset.csv')
