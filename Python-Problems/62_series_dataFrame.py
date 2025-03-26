@@ -45,3 +45,6 @@ data = pd.read_csv('weather_data.csv')
 # monday_temp = int(monday.temp)
 # monday_temp_f = monday_temp * 9 / 5 + 32
 # print(monday_temp_f)
+
+
+

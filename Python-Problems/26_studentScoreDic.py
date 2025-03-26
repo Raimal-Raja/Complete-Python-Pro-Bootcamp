@@ -5,7 +5,7 @@ student_score = {
 student_grades = { }
 for student in student_score:
     score = student_score[student]
-    if score > 90 and score < 96:
+    if 90 < score < 96:
         student_grades[student] = "A"
     elif score > 95:
         student_grades[student] = "A+"
