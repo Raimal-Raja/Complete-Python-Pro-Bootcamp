@@ -1,7 +1,14 @@
-import  pandas as pd
-num1= [1,3]
-num2 = [2]
-num1.extend(num2)
-print(num1)
+arr = [1, 2, 4, 5]
+arr2 = [9, 20]
 
-pd.num1.med
+arr2.extend(arr)
+arr2.sort()
+n = len(arr2)
+median = 0
+if n % 2 == 0:
+    mid1 = arr2[n // 2 - 1]
+    mid2 = arr2[n // 2]
+    median = (mid1 + mid2) / 2
+else:
+    median = [n // 2]
+print(median)
