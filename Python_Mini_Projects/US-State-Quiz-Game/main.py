@@ -1,8 +1,10 @@
 import turtle
+
+import pandas
 import pandas as pd
 
 screen = turtle.Screen()
-screen.title("U.S. States Game")
+screen.title("Us States Game")
 image = "blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
@@ -10,30 +12,44 @@ turtle.shape(image)
 data = pd.read_csv("50_states.csv")
 all_states_list = data.state.to_list()
 
+print(all_states_list)
+# print(answer)
+
 guess_list = []
 missing_states = []
-n = 50
-
-while len(guess_list) < n:
+while len(guess_list)< 50:
+    # answer = screen.textinput(title=f"{len(guess_list)}/50 Correct States", prompt="What's the next state's name").title()
     answer = screen.textinput(title=f"{len(guess_list)}/50 Correct States", prompt="What's the next state's name")
-    if answer is None or answer.lower() in ['exit', 'stop']:
-        missing_states = [state for state in all_states_list if state not in guess_list]
-        break
-
-    answer = answer.title()
-    if answer in all_states_list and answer not in guess_list:
+    answer =  answer.title()
+    if answer in all_states_list:
         guess_list.append(answer)
         timy = turtle.Turtle()
         timy.hideturtle()
         timy.penup()
         row = data[data.state == answer]
-        timy.goto(int(row.x), int(row.y))
+        timy.goto(int(row.x),int(row.y))
+        # timy.write(answer)
+
+        #.item() method will extract first element
         timy.write(row.state.item())
+    elif answer == 'Exit' or answer == 'Stop':
 
-# Save guessed states
-df_guess = pd.DataFrame({"guessed state": guess_list})
-df_guess.to_csv("correct_guess_states.csv", index=False)
+        for state in all_states_list:
+            if state not in guess_list:
+                missing_states.append(state)
+        data_dict = {
+            "correct guess":guess_list,
+            "missed states":missing_states
+        }
 
-# Save missed states
-df_missing = pd.DataFrame({"missed state": missing_states})
-df_missing.to_csv("missing_states.csv", index=False)
+
+        # handling length
+        max_len = max(len(guess_list), len(missing_states))
+        guess_list += [""] * (max_len - len(guess_list))
+        missing_states += [""] * (max_len - len(missing_states))
+
+        new_data = pandas.DataFrame(data_dict)
+        new_data.to_csv("result.csv", index=False)
+        # print(missing_states)
+        break
+
