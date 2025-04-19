@@ -8,4 +8,7 @@ import pandas as pd
 
 file = pd.read_csv('student.csv')
 for(index, row) in file.iterrows():
-    print(row)
+    # print(row)
+    # print(row.students)
+    if row.students == "Raimal Raja":
+        print(row.Score)
