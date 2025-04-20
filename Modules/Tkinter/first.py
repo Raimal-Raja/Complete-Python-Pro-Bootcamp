@@ -20,9 +20,10 @@ button.pack()
 
 
 
-
-
-
+# config(padx= , pady=)
+# pack(side='left')
+# space(x=, y=)
+# grid(coloum=,row=,)
 
 
 

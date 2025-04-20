@@ -2,7 +2,7 @@ from tkinter import *
 
 from click import command
 
-from Modules.Tkinter.main import button
+from Modules.Tkinter.first import button
 
 window = Tk()
 input = Entry()
