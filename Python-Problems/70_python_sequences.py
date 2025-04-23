@@ -1,7 +1,6 @@
 # python sequences
 # list, range, string, tuple
 
-
 num_list = [i * 2 for i in range(1, 5)]
 print(num_list)
 
