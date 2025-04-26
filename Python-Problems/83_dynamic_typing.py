@@ -1,1 +1,1 @@
-# changing a data type of variable by changing it's content
+# changing a data type of variable by changing it's content is called dynamic typing
