@@ -1,19 +1,23 @@
 from tkinter import *
-
+from tkinter.messagebox import showinfo, askokcancel
 
 
 def getValue():
     email = username.get()
     password_ = password.get()
     website_ = website.get()
-    with open("password.txt",mode='w') as file:
-        file.write(f"Website: {website_} Email: {email} Password: {password_}" )
-    return list
+
+    messagebox = askokcancel(title=website_, message=f"These are the details entered: \nEmail: {email} \nPassword: {password_}")
+    if messagebox:
+        with open("password.txt",mode='w') as file:
+            file.write(f"Website: {website_} Email: {email} Password: {password_} \n" )
+            password.delete(0, END)
+            website.delete(0,END)
 
 # initializing window
 window = Tk()
 window.title("Password Manager")
-window.config(padx=50, pady=50)
+window.config(padx=10, pady=10)
 
 # Entry
 website = Entry(width=35)
@@ -38,9 +42,9 @@ generate_password = Button(text="Generate Password")
 
 # background window
 canvas = Canvas(height=200, width=200)
-# logo_img = PhotoImage(file="logo.png")
-# canvas.create_image(100, 100,image=logo_img)
-#
+logo_img = PhotoImage(file="logo.png")
+canvas.create_image(100, 100,image=logo_img)
+
 #
 # # Packing
 canvas.grid(row=0, column=1)
