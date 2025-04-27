@@ -7,12 +7,17 @@ def getValue():
     password_ = password.get()
     website_ = website.get()
 
-    messagebox = askokcancel(title=website_, message=f"These are the details entered: \nEmail: {email} \nPassword: {password_}")
-    if messagebox:
-        with open("password.txt",mode='w') as file:
-            file.write(f"Website: {website_} Email: {email} Password: {password_} \n" )
-            password.delete(0, END)
-            website.delete(0,END)
+    if len(website_) ==0:
+        askokcancel(title="Warning",message="You have left website cell empty, please enter website")
+    elif len(password_) == 0:
+        askokcancel(title="Warning",message="You have left password empty, please enter password")
+    else:
+        messagebox = askokcancel(title=website_, message=f"These are the details entered: \nEmail: {email} \nPassword: {password_}")
+        if messagebox:
+            with open("password.txt",mode='w') as file:
+                file.write(f"Website: {website_} Email: {email} Password: {password_} \n" )
+                password.delete(0, END)
+                website.delete(0,END)
 
 # initializing window
 window = Tk()
