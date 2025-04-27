@@ -19,6 +19,7 @@ def getValue():
                 password.delete(0, END)
                 website.delete(0,END)
 
+
 # initializing window
 window = Tk()
 window.title("Password Manager")
