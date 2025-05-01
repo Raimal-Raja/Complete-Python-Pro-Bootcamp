@@ -54,10 +54,21 @@ def getValue():
     else:
         messagebox = askokcancel(title=website_, message=f"These are the details entered: \nEmail: {email} \nPassword: {password_}")
         if messagebox:
-            with open("password.json",mode='r') as data_file:
-                json.dumps(new_data)
+            # try:
+            #     with open("password.json", mode='r') as data_file:
+            #         try:
+            #             data = json.load(data_file)
+            #         except json.JSONDecodeError:
+            #             data = {}
+            # except FileNotFoundError:
+            #     data = {}
+            #
+            # data.update(new_data)
+
+            with open("password.json", mode='w') as data_file:
+                json.dump(new_data, data_file, indent=4)  # Correct usage of json.dump()
                 password.delete(0, END)
-                website.delete(0,END)
+                website.delete(0, END)
 
 
 ############### initializing window
@@ -70,7 +81,7 @@ website = Entry(width=35)
 website.focus()
 username = Entry(width=35)
 username.focus()
-username.insert(0,"eg; professor@gmail.com")
+username.insert(0,"professors@gmail.com")
 password = Entry(width=35)
 password.focus()
 
