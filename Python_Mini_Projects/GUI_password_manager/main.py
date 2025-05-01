@@ -4,6 +4,9 @@ from random import choice, randint, shuffle
 import pyperclip
 import json
 
+from pandas.core.reshape.util import tile_compat
+
+
 ###################### Password Generator
 
 
@@ -71,6 +74,16 @@ def getValue():
                 website.delete(0, END)
 
 
+def searchData():
+    with open('password.json') as data_file:
+        data = json.load(data_file)
+        website_ = website.get()
+        if website_  in data:
+            item =  data[website_]
+            askokcancel(title="Info", message=f"Username: {item['Email']}\nPassword: {item['Password']}")
+        else:
+            askokcancel(title="Warning", message="Doesn't Exits")
+
 ############### initializing window
 window = Tk()
 window.title("Password Manager")
@@ -93,6 +106,7 @@ Password_label = Label(text="Password")
 ############## Buttons
 add = Button(text="Add", command=getValue)
 generate_password = Button(text="Generate Password", command=passwordGenerator)
+searchBtn = Button(text = "Search",bg='blue', command=searchData)
 
 
 ############# background window
@@ -116,6 +130,7 @@ Password_label.grid(column=0, row=3)
 ################## Button
 generate_password.grid(column=3, row=3)
 add.grid(column=1, row=4)
+searchBtn.grid(column=2,row=1)
 
 
 
