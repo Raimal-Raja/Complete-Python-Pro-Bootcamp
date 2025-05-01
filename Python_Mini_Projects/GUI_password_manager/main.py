@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter.messagebox import showinfo, askokcancel
 from random import choice, randint, shuffle
 import pyperclip
+import json
 
 ###################### Password Generator
 
@@ -41,6 +42,10 @@ def getValue():
     email = username.get()
     password_ = password.get()
     website_ = website.get()
+    new_data = {website_:{
+        "Email":email,
+        "Password":password_
+    }}
 
     if len(website_) ==0:
         askokcancel(title="Warning",message="You have left website cell empty, please enter website")
@@ -49,8 +54,8 @@ def getValue():
     else:
         messagebox = askokcancel(title=website_, message=f"These are the details entered: \nEmail: {email} \nPassword: {password_}")
         if messagebox:
-            with open("password.txt",mode='w') as file:
-                file.write(f"Website: {website_} Email: {email} Password: {password_} \n" )
+            with open("password.json",mode='r') as data_file:
+                json.dumps(new_data)
                 password.delete(0, END)
                 website.delete(0,END)
 
