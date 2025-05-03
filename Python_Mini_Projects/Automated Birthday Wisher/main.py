@@ -4,8 +4,8 @@ import smtplib
 import pandas  as pd
 import random
 
-MY_EMAIL = "thyprofessors@gmail.com"
-PASSWORD = "rklh jxpp bfnv poxy"
+MY_EMAIL = "your email"
+PASSWORD = "your password"
 
 today = (dt.datetime.now().month, dt.datetime.now().day)
 data  = pd.read_csv('birthdays.csv')
