@@ -3,6 +3,7 @@ from datetime import datetime
 import smtplib
 import time
 
+
 LAT = 24.659222
 LONG = -68.840448
 EMAIL = "your email here"
