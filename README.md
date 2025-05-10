@@ -1,4 +1,4 @@
-# Complete Python Pro Bootcamp
+# Complete Basic to Advanced Python - Project - Bootcamp
 
 This repository is a comprehensive collection of Python programming resources, exercises, and projects, designed to take learners from beginner to advanced levels. Inspired by the "100 Days of Code: The Complete Python Pro Bootcamp" course, this repository offers practical coding experience through a variety of challenges and applications.
 
